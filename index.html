@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="application-name" content="FirstTrust">
+    <title>FirstTrust</title>
+    <meta name="title" content="FirstTrust Mortgage Bank Plc">
+    <meta name="description" content="At FirstTrust Mortgage Bank Plc, we have offers that are tailored to your desires financially from loans to savings to mortgages to investments.">
+    <meta name="keywords" content="Mortgages, Loans, Investments, Savings, FirstTrust Mortgage Bank Plc, Mortgage Financing">
+    <meta name="robots" content="index, follow">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="main.css" media="all">
+</head>
+<body>
+    <div class="modal fade" id="modalCalculator">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="sec-calculator bg-blue-fade py-3 py-md-5">
+                        <div class="container my-4">
+                            <div class="col-lg-12 col-md-10 text-left">
+                                <h2 class="mb-4 section-title cl-blue">Loan Calculator</h2>
+                                <p class="">Whether you are interested in Home ownership loan, Equity release loan, NHF, mortgage refinancing, or short-term loan; nothing beats being prepared. Our loan calculator will help you analyse the numbers involved in making your dream happen at the best rates.</p>
+                            </div>
+                            <div class="row justify-content-left">
+                                <div class="col-md-6">
+                                    <div class="card border-0 mt-3 drop-shadow drop-shadow-xs">
+                                        <div class="card-body px-lg-5 py-lg-4">
+                                            <div class="row">
+                                                <div class="form-group dropdown col-12 d-flex">
+                                                    <div class="col-12 col-md-10 mx-md-auto">
+                                                        <button class="btn btn-yellow btn-sm dropdown-toggle w-100 py-2" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button">
+                                                        Loan Type
+                                                        <i class="mr-2 fas fa-angle-down"></i>
+                                                    </button>
+                                                        <div class="dropdown-menu nav" id="nav-tab" role="tablist" aria-labelledby="dropdownMenuButton" style="right: 30px">
+                                                            <a class="dropdown-item" id="calc-one-tab" data-toggle="tab" href="#loan-calc-one" role="tab" aria-controls="loan-calc-one" aria-selected="true">Outright Purchase</a>
+                                                            <a class="dropdown-item" id="calc-two-tab" data-toggle="tab" href="#loan-calc-two" role="tab" aria-controls="loan-calc-one" aria-selected="false">Construction Finance</a>
+                                                            <a class="dropdown-item" id="calc-three-tab" data-toggle="tab" href="#loan-calc-three" role="tab" aria-controls="loan-calc-three" aria-selected="false">Equity Release</a>
+                                                            <a class="dropdown-item" id="calc-four-tab" data-toggle="tab" href="#loan-calc-four" role="tab" aria-controls="loan-calc-four" aria-selected="false">NHF Loan</a>
+                                                            <a class="dropdown-item" id="calc-five-tab" data-toggle="tab" href="#loan-calc-five" role="tab" aria-controls="loan-calc-five" aria-selected="false">Mortgage Refinancing</a>
+                                                            <a class="dropdown-item" id="calc-six-tab" data-toggle="tab" href="#loan-calc-six" role="tab" aria-controls="loan-calc-six" aria-selected="false">Short Term Loan</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-content">
+                                                    <div class="tab-pane fade show active" id="loan-calc-one" role="tabpanel" aria-labelledby="calc-one-tab">
+                                                        <div class="col-lg row">
+                                                            <div class="col-md-6">
+                                                                <p class="text-muted mt-2 mb-0"><small>Outright Purchase:</small></p>
+                                                            </div>
+                                                            <div class="form-group col-md-6">
+                                                                <input type="number" id="loan_amount" class="form-control b-line" placeholder="&#8358; Loan Amount" required>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg row">
+                                                            <div class="form-group col-md-6">
+                                                                <input type="text" id="interest" value="24%" class="form-control b-line" placeholder="% interest Rate" disabled>
+                                                            </div>
+                                                            <div class="form-group col-md-6">
+                                                                <input type="number" id="term" class="form-control b-line" placeholder="(Yrs) Term" required>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="tab-pane fade" id="loan-calc-two" role="tabpanel" aria-labelledby="calc-two-tab">
+                                                        <div class="col-lg row">
+                                                            <div class="col-md-6">
+                                                                <p class="text-muted mt-2 mb-0"><small>Construction Finance:</small></p>
+                                                            </div>
+                                                            <div class="form-group col-md-6">
+                                                                <input type="number" id="loan_amount" class="form-control b-line" placeholder="&#8358; Loan Amount" required>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg row">
+                                                            <div class="form-group col-md-6">
+                                                                <input type="text" id="interest" value="24%" class="form-control b-line" placeholder="% interest Rate" disabled>
+                                                            </div>
+                                                            <div class="form-group col-md-6">
+                                                                <input type="number" id="term" class="form-control b-line" placeholder="(Yrs) Term" required>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="tab-pane fade" id="loan-calc-three" role="tabpanel" aria-labelledby="calc-three-tab">
+                                                        <div class="col-lg row">
+                                                            <div class="col-md-6">
+                                                                <p class="text-muted mt-2 mb-0"><small>Equity Release:</small></p>
+                                                            </div>
+                                                            <div class="form-group col-md-6">
+                                                                <input type="number" id="loan_amount" class="form-control b-line" placeholder="&#8358; Loan Amount" required>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg row">
+                                                            <div class="form-group col-md-6">
+                                                                <input type="text" id="interest" value="25%" class="form-control b-line" placeholder="% interest Rate" disabled>
+                                                            </div>
+                                                            <div class="form-group col-md-6">
+                                                                <input type="number" id="term" class="form-control b-line" placeholder="(Yrs) Term" required>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="tab-pane fade" id="loan-calc-four" role="tabpanel" aria-labelledby="calc-four-tab">
+                                                        <div class="col-lg row">
+                                                            <div class="col-md-6">
+                                                                <p class="text-muted mt-2 mb-0"><small>NHF Loan:</small></p>
+                                                            </div>
+                                                            <div class="form-group col-md-6">
+                                                                <input type="number" id="loan_amount" class="form-control b-line" placeholder="&#8358; Loan Amount" required>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg row">
+                                                            <div class="form-group col-md-6">
+                                                                <input type="text" id="interest" value="6%" class="form-control b-line" placeholder="% interest Rate" disabled>
+                                                            </div>
+                                                            <div class="form-group col-md-6">
+                                                                <input type="number" id="term" class="form-control b-line" placeholder="(Yrs) Term" required>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="tab-pane fade" id="loan-calc-five" role="tabpanel" aria-labelledby="calc-five-tab">
+                                                        <div class="col-lg row">
+                                                            <div class="col-md-6">
+                                                                <p class="text-muted mt-2 mb-0"><small>Mortgage Refinancing:</small></p>
+                                                            </div>
+                                                            <div class="form-group col-md-6">
+                                                                <input type="number" id="loan_amount" class="form-control b-line" placeholder="&#8358; Loan Amount" required>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg row">
+                                                            <div class="form-group col-md-6">
+                                                                <input type="text" id="interest" value="24%" class="form-control b-line" placeholder="% interest Rate" disabled>
+                                                            </div>
+                                                            <div class="form-group col-md-6">
+                                                                <input type="number" id="term" class="form-control b-line" placeholder="(Yrs) Term" required>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="tab-pane fade" id="loan-calc-six" role="tabpanel" aria-labelledby="calc-six-tab">
+                                                        <div class="col-lg row">
+                                                            <div class="col-md-6">
+                                                                <p class="text-muted mt-2 mb-0"><small>Short Term Loan:</small></p>
+                                                            </div>
+                                                            <div class="form-group col-md-6">
+                                                                <input type="number" id="loan_amount" class="form-control b-line" placeholder="&#8358; Loan Amount" required>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg row">
+                                                            <div class="form-group col-md-6">
+                                                                <input type="text" id="interest" value="28%" class="form-control b-line" placeholder="% interest Rate" disabled>
+                                                            </div>
+                                                            <div class="form-group col-md-6">
+                                                                <input type="number" id="term" class="form-control b-line" placeholder="(Yrs) Term" required>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="form-group">
+                                                        <a href="javascript:void(0)" id="calculate" class="btn btn-yellow btn-sm mt-3 py-2 px-4" onclick="preventDefault()">Calculate</a>
+                                                        <a href="javascript:void(0)" class="btn btn-fbn btn-sm mt-3 py-2 px-4" id="reset" onclick="preventDefault()">Reset</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="card border-0 mt-3 drop-shadow drop-shadow-xs">
+                                        <div class="card-body px-lg-5 py-lg-4">
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <p>Per Month, You Repay
+                                                        <br>
+                                                        <small class="font-weight-light">assuming your interest rate stays the same</small>
+                                                    </p>
+                                                </div>
+                                                <div class="text-right mr-0">
+                                                    <p>&#8358;<span id="monthly_amount">0</span></p>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-3">
+                                                <div class="col-8">
+                                                    <p>Total you'll repay over full term
+                                                        <br>
+                                                        <small class="font-weight-light">Does not include <b>Upfront Charges</b> (Committement Fee, Service Charge & Management Fee)</small>
+                                                    </p>
+                                                </div>
+                                                <div class="text-right mr-0">
+                                                    <p>&#8358;<span id="total_amount">0</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal_content animated slideInRight">
+        <div class="head">
+            <a href="https://ibank.trustbondmortgagebankplc.com/IntBanking" target="_blank"><i class="material-icons lock">lock</i>Internet Banking</a>
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                        <h4 class="panel-title">
+                            Account
+                            <i class="fas fa-angle-down"></i>
+                        </h4>
+                    </a>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <p><a href="applicationForm.html">Accounts</a></p>
+                        <li><a href="applicationForm.html">Application Form</a></li>
+                        <li><a href="loanApplication.html"> Loan Application</a></li>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                        <h4 class="panel-title">
+                            Loan & Mortages<i class="fas fa-angle-down"></i>
+                        </h4>
+                    </a>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p><a href="loanAndMortages.html">Loan & Mortages</a></p>
+                        <li><a href="rentLoan.html">Rent Loan</a></li>
+                        <li><a href="shortTermLoan.html">Short Term Loan</a></li>
+                        <p>Mortage Product</p>
+                        <li><a href="outrightPurchaseMortgage.html">Outright Purchase Mortgage</a></li>
+                        <li><a href="valueAddedLoan.html">VAL Mortgage Loans</a></li>
+                        <li><a href="constructionFinace.html">Construction Finance</a></li>
+                        <li><a href="contstructionMortgage.html">Construction Mortgage</a></li>
+                        <li><a href="equityRealease.html">Equity Release</a></li>
+                        <li><a href="mortgageRefinance.html">Mortgage Refinance</a></li>
+                        <li><a href="homeImprovement.html">Home Improvement</a></li>
+                        <li><a href="disporaMortgage.html">Diaspora Mortgage</a></li>
+                        <li><a href="generationalMortgage.html">Generational Mortgage</a></li>
+                        <li><a href="microMortgage.html">Micro Mortgage</a></li>
+                        <li><a href="landAcquisition.html">Land Acquisition</a></li>
+                        <li><a href="homeOwnershipMortgageAccount.html">Home Ownership Mortgage Account</a></li>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                        <h4 class="panel-title">
+                            Savings & Investments <i class="fas fa-angle-down"></i>
+                        </h4>
+                    </a>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p><a href="savingAndInvestment.html">Savings And Investments</a></p>
+                        <li><a href="homePlan.html">Home Plan</a></li>
+                        <li><a href="childrenSavingsAccount.html">Children Savings Account</a></li>
+                        <li><a href="targetSavingAccount.html">Target Savings Account</a></li>
+                        <li><a href="endowmentSavingsAccount.html">Endowment Savings Account</a></li>
+                        <li><a href="firsttrustPremiumAccount.html">FirstTrust Premium Account</a></li>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                        <h4 class="panel-title">
+                            About Us <i class="fas fa-angle-down"></i>
+                        </h4>
+                    </a>
+                </div>
+                <div id="collapse4" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <li><a href="aboutUs.html">About Us</a></li>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">
+                        <h4 class="panel-title">
+                            Media<i class="fas fa-angle-down"></i>
+                        </h4>
+                    </a>
+                </div>
+                <div id="collapse6" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <li><a href="media.html">Media</a></li>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">
+                        <h4 class="panel-title">
+                            Investors Relations<i class="fas fa-angle-down"></i>
+                        </h4>
+                    </a>
+                </div>
+                <div id="collapse7" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <li><a href="investorUpdate.html">Investors updates & records</a></li>
+                        <li><a href="financial.html">Financials</a></li>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2>Quick Links</h2>
+        <div class="quick">
+            <li><a href="applicationForm.html">Open an Account</a></li>
+            <li><a href="https://ibank.trustbondmortgagebankplc.com/IntBanking" target="_blank">Internet Banking</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#modalCalculator">Loan Calculator</a></li>
+            <li><a href="savingAndInvestment.html">Investmnt Plan</a></li>
+            <li><a href="contact.html">Customer Service</a></li>
+        </div>
+    </div>
+
+    <section id="section">
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 logo">
+                        <img src="images/FirstTrust%20Icon.svg" alt="" class="icon">
+                        <a href="index.html" class="main"><img src="images/Logo%20Grid.svg" alt=""></a>
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="top">
+                            <p>Social Links : </p>
+                            <a href="https://web.facebook.com/ft.mortgagebankplc.7" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/ftmortgagebankplc/" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-linkedin-in"></i>
+                            <input type="text">
+                            <i class="fas fa-search"></i>
+                            <i class="material-icons lock">lock</i>
+                            <p class="int"><a href="https://ibank.trustbondmortgagebankplc.com/IntBanking" target="_blank">Internet Banking</a></p>
+                        </div>
+                        <ul>
+                            <li id="acct"><a href="applicationForm.html">Account</a><img src="images/ElegantIcons%20arrow%20carrot%20down.svg" alt=""></li>
+                            <li class="next_one" id="loan"><a href="loanAndMortages.html">Loans & Mortgages</a><img src="images/ElegantIcons%20arrow%20carrot%20down.svg" alt=""></li>
+                            <li class="next_one" id="saving"><a href="savingAndInvestment.html">Savings & Investments</a><img src="images/ElegantIcons%20arrow%20carrot%20down.svg" alt=""></li>
+                            <li class="next_one" id="about"><a href="aboutUs.html">About Us</a><img src="images/ElegantIcons%20arrow%20carrot%20down.svg" alt=""></li>
+                            <li class="next_one" id="media"><a href="media.html">Media</a><img src="images/ElegantIcons%20arrow%20carrot%20down.svg" alt=""></li>
+                            <li class="next_one" id="investor"><a href="#">Investor Relations</a><img src="images/ElegantIcons%20arrow%20carrot%20down.svg" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="account drop">
+            <div class="container">
+                <div class="row">
+                    <div class="first col-md-3">
+                        <p>Account</p>
+                        <img src="images/Accounts-II%402x.png" alt="">
+                    </div>
+                    <div class="col-md-3">
+                        <p>Individual</p>
+                        <li><a href="applicationForm.html">Application form</a></li>
+                        <li><a href="loanApplication-2.html">Loan Application</a></li>
+                    </div>
+                    <div class="col-md-3">
+                        <p>Coorperate</p>
+                        <li><a href="applicationForm.html">Application form</a></li>
+                        <li><a href="loanApplication-2.html">Loan Application</a></li>
+                    </div>
+                    <div class="col-md-3">
+                        <i class="material-icons take_away">
+                    cancel
+                    </i>
+                        <p>Agency</p>
+                        <li><a href="applicationForm.html">Application form</a></li>
+                        <li><a href="loanApplication-2.html">Loan Application</a></li>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="Loan drop">
+            <div class="container">
+                <div class="row">
+                    <div class="first col-md-3">
+                        <p>Loans & Mortgages</p>
+                        <img src="images/Loans-and-mortgages-II%402x.png" alt="">
+                    </div>
+                    <div class="col-md-3">
+                        <p>Loan Product</p>
+                        <li><a href="shortTermLoan.html">Short Term Loan</a></li>
+                        <li><a href="rentLoan.html">Rent Loan</a></li>
+
+                    </div>
+                    <div class="col-md-3">
+                        <p>Mortgage Product</p>
+                        <li><a href="outrightPurchaseMortgage.html">Outright Purchase Mortgage</a></li>
+                        <li><a href="valueAddedLoan.html">VAL Mortgage Loans</a></li>
+                        <li><a href="constructionFinace.html">Construction Finance</a></li>
+                        <li><a href="contstructionMortgage.html">Construction Mortgage</a></li>
+                        <li><a href="equityRealease.html">Equity Release</a></li>
+                        <li><a href="mortgageRefinance.html">Mortgage Refinance</a></li>
+                    </div>
+                    <div class="col-md-3">
+                        <i class="material-icons take_away">
+                            cancel
+                        </i>
+                        <br><br>
+                        <li><a href="homeImprovement.html">Home Improvement</a></li>
+                        <li><a href="disporaMortgage.html">Diaspora Mortgage</a></li>
+                        <li><a href="generationalMortgage.html">Generational Mortgage</a></li>
+                        <li><a href="microMortgage.html">Micro Mortgage</a></li>
+                        <li><a href="landAcquisition.html">Land Acquisition</a></li>
+                        <li><a href="homeOwnershipMortgageAccount.html">Home Ownership Mortgage Account</a></li>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="savings drop">
+            <div class="container">
+                <div class="row">
+                    <div class="first col-md-3">
+                        <p>Savings & Investments</p>
+                        <img src="images/Savings%402x.png" alt="">
+                    </div>
+                    <div class="col-md-3">
+                        <p>Savings</p>
+                        <li><a href="homePlan.html">Home Plan</a></li>
+                        <li><a href="childrenSavingsAccount.html">Children Savings Account</a></li>
+                        <li><a href="targetSavingAccount.html">Target Savings Account</a></li>
+                        <li><a href="endowmentSavingsAccount.html">Endowment Savings Account</a></li>
+                        <li><a href="firsttrustPremiumAccount.html">FirstTrust Premium Account</a></li>
+                    </div>
+                    <div class="col-md-3">
+                        <p>Investments</p>
+                    </div>
+                    <div class="col-md-3">
+                        <i class="material-icons take_away">
+                            cancel
+                        </i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="media drop">
+            <div class="container">
+                <div class="row">
+                    <div class="first col-md-3">
+                        <p>Media</p>
+                        <img src="images/Media%402x.png" alt="">
+                    </div>
+                    <div class="col-md-3">
+                        <p>Blog</p>
+                        <li><a href="new.html">News</a></li>
+                        <li><a href="video.html">Videos</a></li>
+                    </div>
+                    <div class="col-md-3">
+                        <p>Resources</p>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="document.html">Documents</a></li>
+                    </div>
+                    <div class="col-md-3">
+                        <i class="material-icons take_away">
+                            cancel
+                        </i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="investor drop">
+            <div class="container">
+                <div class="row">
+                    <div class="first col-md-3">
+                        <p>Investor's Relations</p>
+                        <img src="images/Investors%20Relations%402x.png" alt="">
+                    </div>
+                    <div class="col-md-3">
+                        <p>Others</p>
+                        <li><a href="investorUpdate.html">Investors updates & records</a></li>
+                        <li><a href="financial.html">Financials</a></li>
+                    </div>
+                    <div class="col-md-3">
+                    </div>
+                    <div class="col-md-3">
+                        <i class="material-icons take_away">
+                            cancel
+                        </i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="container caption animated bounceInLeft delay-2s">
+            <div class="caption_text text_1">
+                <h1>Realty Financing made easy </h1>
+                <p>Acquire the momentum you need to have <br>your own landed property </p>
+                <a href="loanAndMortages.html"><button>Get a Rent Loan <span></span><span></span><span></span><span></span></button></a>
+            </div>
+            <div class="caption_text text_2">
+                <h1>Account Opening Forms </h1>
+                <p>Remember the little drops. Save your way <br>into home ownership</p>
+                <a href="applicationForm.html"><button>Open An Account <span></span><span></span><span></span><span></span></button></a>
+            </div>
+            <div class="caption_text text_3">
+                <h1>Savings Goal </h1>
+                <p>Take advantage of our various saving plans <br>solely designed to grow your funds </p>
+                <a href="savingAndInvestment.html"><button>Start Saving <span></span><span></span><span></span><span></span></button></a>
+            </div>
+            <div class="caption_text text_4">
+                <h1>We ensure you <br>remain happy</h1>
+                <p>We provide you with the opportunity to pay for your rent <br>hassle free while you pay back at your pace</p>
+                <a href="loanAndMortages.html"><button>Get a Rent Loan <span></span><span></span><span></span><span></span></button></a>
+            </div>
+            <div class="cons">
+                <i class="fas fa-arrow-up up"></i><br>
+                <i class="fas fa-arrow-down down"></i>
+            </div>
+        </div>
+        <div class="bot">
+            <div class="container">
+                <ul>
+                    <a href="applicationForm.html">
+                        <li><img src="images/noun_open_1509571.svg" alt="">Open an account</li>
+                    </a>
+                    <a href="https://ibank.trustbondmortgagebankplc.com/IntBanking" target="_blank">
+                        <li class="shit"><img src="images/noun_Secure%20Payment_1895518.svg" alt="">Internet banking</li>
+                    </a>
+                    <a href="#" data-toggle="modal" data-target="#modalCalculator">
+                        <li class="shit"><img src="images/noun_investment_2365736.svg" alt="">Loan calculator</li>
+                    </a>
+                    <a href="savingAndInvestment.html">
+                        <li class="shit"><img src="images/noun_investment_2795557.svg" alt="">Investment Plan</li>
+                    </a>
+                    <a href="contact.html">
+                        <li class="shit"><img src="images/noun_customer%20service_2273192.svg" alt="">Customer service</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <div class="right">
+        <div class="expgroup">
+            <a href="https://web.facebook.com/ft.mortgagebankplc.7" target="_blank"><button class="icon gplus">
+            <i class="fab fa-facebook-f"></i>
+        </button></a>
+            <a href="#" target="_blank"><button class="icon linkedin">
+            <i class="fab fa-linkedin-in"></i>
+        </button></a>
+            <a href="#" target="_blank"><button class="icon tumblr">
+            <i class="fab fa-instagram"></i>
+        </button></a>
+            <a href="#" target="_blank"><button class="icon reddit">
+            <i class="fab fa-twitter"></i>
+        </button></a>
+            <a href="https://www.youtube.com/channel/UCqDNe0RcoX7mB4UCX9077EQ/?guided_help_flow=5" target="_blank"><button class="icon pocket">
+            <i class="fab fa-youtube"></i>
+        </button></a>
+        </div>
+        <div class="share">
+            <i class="fas fa-share-alt"></i>
+        </div>
+    </div>
+
+    <div class="why container">
+        <div class="mx-auto">
+            <h1 class="wow tada">Why FirstTrust</h1>
+            <p>We have made getting loans and mortgages, and <br>making savings easier for you</p>
+            <div class="row">
+                <div class="col-md-2">
+                    <p>I want to</p>
+                </div>
+                <div class="col-md-7">
+                    <input type="text" placeholder="Build a House">
+                </div>
+                <div class="col-md-3">
+                    <button>Search <span></span><span></span><span></span><span></span></button>
+                </div>
+            </div>
+        </div>
+        <div class="row pro">
+            <div class="cancel">
+                <p class="product">Products</p>
+                <div class="cancle">
+                    <i class="material-icons">
+                        cancel
+                    </i>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="cont">
+                    <p class="first">Loans & Mortgages</p>
+                    <h5>Construction Finances</h5>
+                    <p class="next">
+                        Construction finance bridges the gap between completed or partially completed work and you being paid.
+                    </p>
+                    <i class="material-icons">keyboard_arrow_right</i>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="cont">
+                    <p class="first">Loans & Mortgages</p>
+                    <h5>Construction Mortgage</h5>
+                    <p class="next">
+                        Loan borrowed to finance the construction of home and only interest is paid during the construction<br> period.
+                    </p>
+                    <i class="material-icons">keyboard_arrow_right</i>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="cont">
+                    <p class="first">Loans & Mortgages</p>
+                    <h5>Land Acquisition</h5>
+                    <p class="next">
+                        Construction finance bridges the gap between completed or partially completed work and you being paid.
+                    </p>
+                    <i class="material-icons">keyboard_arrow_right</i>
+                </div>
+            </div>
+            <p style="margin-top:20px; font-size:12px; ">Can't find what you are looking for? <a href="#">Talk to an advisor</a></p>
+        </div>
+    </div>
+
+    <div class="getting-started container-fluid">
+        <div class="mx-auto">
+            <h5>HOW TO GET STARTED</h5>
+            <h1 class="wow tada">Everything in 3 Simple Steps</h1>
+        </div>
+        <div class="tab-content">
+            <div id="home" class="container tab-pane active"><br>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="images/Browse%20out%20products.svg" alt="">
+                        <h5>Browse Our Products</h5>
+                        <p>Check out our product list. From loans & mortgage products to savings & investments to our internet banking</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="images/Online%20application.svg" alt="">
+                        <h5>Fill out online application</h5>
+                        <p>With our integrated online application. You can apply for any selected product(s).</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="images/Smile%20and%20sit%20back.svg" alt="">
+                        <h5>Smile and sit back</h5>
+                        <p>We'll get back to you with your offer</p>
+                    </div>
+                </div>
+            </div>
+            <div id="menu1" class="container tab-pane fade"><br>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="images/Smile%20and%20sit%20back.svg" alt="">
+                        <h5>Browse Our Products</h5>
+                        <p>Check out our product list. From loans & mortgage products to savings & investments to our internet banking</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="images/Browse%20out%20products.svg" alt="">
+                        <h5>Fill out online application</h5>
+                        <p>With our integrated online application. You can apply for any selected product(s).</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="images/Online%20application.svg" alt="">
+                        <h5>Smile and sit back</h5>
+                        <p>We'll get back to you with your offer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="everything container">
+        <div class="mx-auto">
+            <h5>EVERYTHING YOU NEED</h5>
+            <h1 class="wow tada">Products that meet your needs</h1>
+            <p>We have offers that are tailored to your desires financially<br> from loans to savings to mortgages to investments</p>
+        </div>
+        <div class="tab">
+            <button class="tablinks Bounce To Left" onclick="openCity(event, 'Loan')" id="defaultOpen">Loans<br><span>Use your money for profit</span></button>
+            <button class="tablinks next-one" onclick="openCity(event, 'Mortgages')">Mortgages<br><span>Use your money for profit</span></button>
+            <button class="tablinks next-one" onclick="openCity(event, 'Savings')">Savings<br><span>Use your money for profit</span></button>
+            <button class="tablinks next-one" onclick="openCity(event, 'Investment')">Investments<br><span>Use your money for profit</span></button>
+            <button class="tablinks next-one" onclick="openCity(event, 'Banking')">Online Banking<br><span>Use your money for profit</span></button>
+        </div>
+        <div id="Loan" class="tabcontent animated slideInRight">
+            <div class="image"></div>
+            <p>At FirstTrust we have a range of options available if and when you need funds, allowing you to make plans for the future. We provide an easy application process.</p>
+            <span><i class="material-icons">keyboard_arrow_right</i>LEARN MORE</li></span>
+        </div>
+        <div id="Mortgages" class="tabcontent animated slideInRight">
+            <div class="image_two"></div>
+            <p>At FirstTrust we have a range of options available if and when you need funds, allowing you to make plans for the future. We provide an easy application process.</p>
+            <span><i class="material-icons">keyboard_arrow_right</i>LEARN MORE</li></span>
+        </div>
+        <div id="Savings" class="tabcontent animated slideInRight">
+            <div class="image_three"></div>
+            <p>At FirstTrust we have a range of options available if and when you need funds, allowing you to make plans for the future. We provide an easy application process.</p>
+            <span><i class="material-icons">keyboard_arrow_right</i>LEARN MORE</li></span>
+        </div>
+        <div id="Investment" class="tabcontent animated slideInRight">
+            <div class="image_four"></div>
+            <p>At FirstTrust we have a range of options available if and when you need funds, allowing you to make plans for the future. We provide an easy application process.</p>
+            <span><i class="material-icons">keyboard_arrow_right</i>LEARN MORE</li></span>
+        </div>
+        <div id="Banking" class="tabcontent animated slideInRight">
+            <div class="image_five"></div>
+            <p>At FirstTrust we have a range of options available if and when you need funds, allowing you to make plans for the future. We provide an easy application process.</p>
+            <span><i class="material-icons">keyboard_arrow_right</i>LEARN MORE</li></span>
+        </div>
+    </div>
+    <div class="who-we-are container-fluid">
+        <div class="text  wow bounceInRight">
+            <h1>We are FirstTrust</h1>
+            <p>FirstTrust Mortgage Bank Plc is a mortgage bank resulting from the merger between First Mortgages Limited and TrustBond Mortgage Bank Plc with the intention of creating a strong financial institution that is capable of playing a headship role
+                in the mortgage banking sector.<br></p>
+            <a href="aboutUs.html"><button>Learn more About Us <span></span><span></span><span></span><span></span</button>
+            </a>
+        </div>
+    </div>
+    <div class="location container">
+        <div class="row">
+            <div class="col-md-6 description">
+                <h5>LOCATIONS</h5>
+                <h2>We strive beyond physical<br> state</h2>
+                <p>124 Awolowo way, Ikoyi Lagos, <br>Nigeria</p>
+                <li><i class="material-icons">keyboard_arrow_right</i>Give us a call</li>
+                <li><i class="material-icons">keyboard_arrow_right</i>SEND US AN EMAIL</li>
+            </div>
+            <div class="col-md-6 image">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.6269197040874!2d3.4167925140173!3d6.441929995339409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2b28b15883%3A0xe9972f91cd236351!2s124%20Awolowo%20Rd%2C%20Ikoyi%2C%20Lagos!5e0!3m2!1sen!2sng!4v1572653181050!5m2!1sen!2sng" width="585" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="helpful-tool container">
+        <h2>Helpful Tools</h2>
+        <div class="row">
+            <div class="first col-md-4">
+                <div class="inn">
+                    <h3>Mortgage Calculator</h3>
+                    <p>Find out how much you could borrow or<br> gain in investments</p>
+                    <p class="footer" data-toggle="modal" data-target="#modalCalculator"><i class="material-icons">keyboard_arrow_right</i>Check our calculator</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="inn">
+                    <h3>Application Form</h3>
+                    <p>Get started on getting a loan or making an<br> investment with us</p>
+                    <a href="applicationForm.html">
+                        <p class="footer"><i class="material-icons">keyboard_arrow_right</i>Fill our online form</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="inn">
+                    <h3>FAQs</h3>
+                    <p>Check out the frequently asked questions from our customers.</p>
+                    <a href="contact.html">
+                        <p class="footer"><i class="material-icons">keyboard_arrow_right</i>Go to FAQs</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-6 display-mobile">
+                    <img src="images/Logo%20Grid.svg" alt="">
+                    <li class="contact_1">+(234) 812 743 3340 </li>
+                </div>
+                <div class="col-md-4 col-12">
+                    <p>Subscribe to our mailing list</p>
+                    <p style="font-weight:400;">Get the latest information on product offerings, current trends and much more</p>
+                    <input type="text" placeholder="Email Address"><button>Subscribe</button>
+                </div>
+                <div class="col-md-2 col-6">
+                    <p>Quicklinks</p>
+                    <li>Application Form </li>
+                    <li>Loan Calculator</li>
+                    <li>Interest Rate Chart</li>
+                    <li>Feedback Survey</li>
+                    <li>Product Offerings</li>
+                </div>
+                <div class="col-md-2 col-6">
+                    <p>About FirstTrust</p>
+                    <li>Our Company </li>
+                    <li>Careers</li>
+                    <li>CSR</li>
+                    <li>Investor Relations</li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </div>
+                <div class="col-md-4 col-6 mobile-none">
+                    <p>Subscribe to our mailing list</p>
+                    <p style="font-weight:400;">Get the latest information on product offerings, current trends and much more</p>
+                    <input type="text" placeholder="Email Address"><button>Subscribe</button>
+                </div>
+                <div class="col-md-1">
+                    <li><img src="images/ElegantIcons%20social%20facebook.html" alt=""></li>
+                    <li><img src="images/JamIcons%20instagram.svg" alt=""></li>
+                    <li><img src="images/ElegantIcons%20social%20twitter.svg" alt=""></li>
+                    <li><img src="images/entypo%20linkedin.svg" alt=""></li>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-footer">
+        <div class="container">
+            <p>© 2020 FirstTrust Bank Plc. RC 196748. All Rights Reserved.</p>
+        </div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://kit.fontawesome.com/799b643291.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.carousel').carousel();
+        });
+    </script>
+</body>
+</html>
